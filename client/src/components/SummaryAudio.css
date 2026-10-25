@@ -1,0 +1,147 @@
+
+.summary-audio {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid var(--border-color, #dbe2ea);
+  border-radius: 16px;
+  background: var(--card-background, #ffffff);
+  color: var(--text-color, #172033);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.summary-audio-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.summary-audio-icon {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: #ede9fe;
+  color: #6d28d9;
+  font-size: 25px;
+}
+
+.summary-audio-heading h3 {
+  margin: 0 0 4px;
+  font-size: 17px;
+}
+
+.summary-audio-heading p {
+  margin: 0;
+  font-size: 13px;
+  opacity: 0.7;
+}
+
+.audio-status {
+  margin-left: auto;
+  padding: 6px 10px;
+  border-radius: 20px;
+  background: #f1f5f9;
+  color: #475569;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.audio-status.playing {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.audio-status.paused {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.audio-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.audio-button {
+  padding: 10px 14px;
+  border: 1px solid var(--border-color, #dbe2ea);
+  border-radius: 9px;
+  background: transparent;
+  color: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.audio-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+}
+
+.audio-button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.audio-play {
+  background: #7c5cff;
+  border-color: #7c5cff;
+  color: #ffffff;
+}
+
+.audio-stop {
+  color: #dc2626;
+}
+
+.audio-settings {
+  display: grid;
+  grid-template-columns: auto minmax(130px, 1fr);
+  align-items: center;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.audio-settings label {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.audio-settings select {
+  width: 100%;
+  min-width: 0;
+  padding: 9px 10px;
+  border: 1px solid var(--border-color, #dbe2ea);
+  border-radius: 8px;
+  background: var(--card-background, #ffffff);
+  color: inherit;
+  font-size: 13px;
+}
+
+.audio-note {
+  margin: 14px 0 0;
+  font-size: 12px;
+  line-height: 1.6;
+  opacity: 0.65;
+}
+
+@media (max-width: 480px) {
+  .summary-audio {
+    padding: 14px;
+  }
+
+  .summary-audio-heading {
+    flex-wrap: wrap;
+  }
+
+  .audio-status {
+    margin-left: 0;
+  }
+
+  .audio-settings {
+    grid-template-columns: 1fr;
+    gap: 7px;
+  }
+}
