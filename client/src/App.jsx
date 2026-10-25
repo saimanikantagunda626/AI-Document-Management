@@ -5,8 +5,8 @@ import { translations } from './languages'
 import DocumentChat from './components/DocumentChat'
 import SummaryAudio from './components/SummaryAudio'
 
-const API_URL = '/api/auth'
-const DOCUMENTS_URL = '/api/documents'
+const API_URL = "https://docuai-backend-65h8.onrender.com/api/auth";
+const DOCUMENTS_URL = "https://docuai-backend-65h8.onrender.com/api/documents";
 
 function App() {
   const [token, setToken] = useState(
