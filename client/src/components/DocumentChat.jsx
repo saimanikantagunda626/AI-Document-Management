@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import './DocumentChat.css';
 
-const CHAT_API = 'http://localhost:5000/api/chat';
+const CHAT_API = 'https://docuai-backend-65h8.onrender.com/api/chat';
 
 function DocumentChat({ token }) {
   const [conversations, setConversations] = useState([]);
